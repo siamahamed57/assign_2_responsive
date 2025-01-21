@@ -5,7 +5,7 @@
   }
 body{
     margin: 0 auto;
-    max-width: 1120px;
+    max-width: 1280px;
     padding: 0;
     box-sizing: border-box;
 }
@@ -86,30 +86,302 @@ body{
 .navbar .navbar_icon{
     display: none;
 }
-
-@media screen and (max-width:768px) {
-    .navbar_logo h1{
-        display: none;
+@media (max-width: 768px) {
+    .navbar{
+        border-bottom: 0.5px solid #FEA301;
     }
-    .navbar .button{
-        display: none;
-    }
-    
-    .navbar .navbar_icon{
-    display: inline;
-    margin-right: 20px;
-    }
-    .navbar-item ul li {
-        display: none;
+    .navbar_logo {
+        justify-content: space-between;
+        width: 100%;
     }
     .navbar_logo img{
         margin-left: 20px;
+        margin-top:-5px;
         margin-bottom:10px;
-
+    }
+    .navbar img {
+        margin-right: 20px;
+    }
+    .navbar_logo h1{
+        display: none;
     }
 
-    .navbar{
-       border-bottom:1px solid #FEA301;
-
+    .navbar button{
+        display: none;
     }
+    .navbar-item ul {
+        width: 100%;
+        
+    }
+
+    .navbar-item ul li {
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+
+    .navbar .button {
+        align-self: center;
+        margin-top: 10px;
+    }
+
+    .navbar .navbar_icon {
+        display: block;
+    }
+
+    .navbar-item ul {
+        display: none; 
+    }
+
+    .navbar.open .navbar-item ul {
+        display: flex; 
+    }
+}
+
+/* Banner part */
+.banner{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap:35px;
+}
+.banner .yellow{
+    font-family: "Quicksand", serif;
+    font-size:62px;
+    font-weight:bold;
+    color:#FEA301 ;
+}
+.banner .black{
+    font-family: "Quicksand", serif;
+    font-size:62px;
+    font-weight:bold;
+    color:black ;
+    
+}
+.banner .blue{
+    font-family: "Quicksand", serif;
+    font-size:62px;
+    font-weight:bold;
+    color:#01ACFD;
+    
+}
+.banner_item p{
+    font-family: "Quicksand", serif;
+    font-size:20px;
+    color:black;
+    
+}
+.banner_item button{
+    background-color:black;
+    color:#FFFFFF;
+    font-family: "Quicksand", serif;
+    font-size:20px;
+    font-weight: 500;
+    border: none;
+    border-radius: 12px;
+    padding: 10px 20px;
+    margin-top: 20px;
+
+}
+
+
+
+@media  (max-width:768px) {
+     .banner{
+        display:flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+       
+     }
+     .banner_item{
+        max-width:320px;
+        align-items: center;
+        margin-top: -40px;
+     }
+      .banner_item_img img{ 
+        max-width:350px;
+     }
+     .banner .yellow{
+        font-size:32px;
+        text-align: center;
+    }
+    .banner .black{
+        font-size:32px;
+        text-align: center;
+    }
+    .banner .blue{
+        font-size:32px;
+        text-align: center;
+        white-space: nowrap;
+        
+    }
+    .banner_item p {
+        font-size: 14px;
+    }
+}
+
+
+/* Curriculam part */
+
+
+.curriculam {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    left: 50%;
+    transform: translateX(-50%);
+    background-image: url('../assets/bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:center;
+    justify-content: space-between;
+
+}
+
+.curriculam_title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: rgb(0, 0, 0);
+    font-family: "Quicksand", serif;
+    font-size:28px;
+    font-weight: 500;
+    margin-top: -20px;
+}
+
+.curriculam_item {
+    max-width:1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.card1 {
+    background: linear-gradient(360deg, #FFFFFF, #DEF5FF);
+    padding: 20px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center; 
+}
+.card1 img{
+    padding: 20px 20px;
+}
+.card1 h1{
+    font-family: "Quicksand", serif;
+    font-size:34px;
+    font-weight: 500;
+}
+.card1 p{
+    font-family: "Quicksand", serif;
+    font-size:16px;
+    font-weight: 500;
+    line-height:2.5;
+}
+.card1 .blue{
+   color:#64C8FF ;
+}
+
+
+
+
+.card2 {
+    background: linear-gradient(360deg, #FFFFFF, #FFF4DC);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center; 
+}
+.card2 img{
+    padding: 20px 20px;
+}
+.card2 h1{
+    font-family: "Quicksand", serif;
+    font-size:34px;
+    font-weight: 500;
+}
+.card2 p{
+    font-family: "Quicksand", serif;
+    font-size:16px;
+    font-weight: 500;
+    line-height:2.5;
+}
+.card2 .yellow{
+   color:#F0AA00 ;
+}
+
+
+.card3 {
+    background: linear-gradient(360deg, #FFFFFF, #EEE1FF);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center; 
+}
+.card3 img{
+    padding: 20px 20px;
+}
+.card3 h1{
+    font-family: "Quicksand", serif;
+    font-size:34px;
+    font-weight: 500;
+}
+.card3 p{
+    font-family: "Quicksand", serif;
+    font-size:16px;
+    font-weight: 500;
+    line-height:2.5;
+}
+.card3 .blue{
+   color:#8700FF ;
+}
+
+.curriculam_button{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.curriculam_button img{
+    margin-right: 10px;
+}
+@media screen and (max-width: 768px) {
+    .curriculam {
+        height: auto;
+        background-size: contain;
+        background-position: top;
+    }
+
+    .curriculam_item {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20 20px;
+    }
+
+    .curriculam_title {
+        font-size: 16px;
+        margin-top: 10px;
+    }
+
+    .card1, .card2, .card3 {
+        width: 80%;
+        margin-left: 20px;
+        max-width: none;
+    }
+
+    .card1 img, .card2 img, .card3 img {
+        max-width: 100%;
+        height: auto;
+    }
+    .card1 h1, .card2 h1, .card3 h1 {
+     font-size: 16px;
+     font-weight:bold;
+    }
+    .card1 p, .card2 p, .card3 p {
+        font-size: 14px;
+       }
+       .curriculam_button img{
+        display: none;
+       }
 }
